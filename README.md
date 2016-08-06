@@ -2,7 +2,7 @@
 
 Docker image to build RR.
 
-## Building the image
+## Building the image (not needed for use when docker push is done)
 
 Replace [YOUR_DOCKER_UNAME] with the username you use at dockerHub.
 
@@ -25,7 +25,7 @@ repo init -u git://github.com/ResurrectionRemix/platform_manifest.git -b marshma
 To sync the source and start the build:
 
 ```bash
-docker run -it -v [YOUR_SRC_DIR]:/root/source -v [YOUR_CACHE_DIR]:/root/cache -e "DEVICE=[YOUR_DEVICE]" lerk/android
+docker run -it -v [YOUR_SRC_DIR]:/root/source -v [YOUR_CACHE_DIR]:/root/cache -e "DEVICE=[YOUR_DEVICE]" lerk/rr-docker
 ```
 
 *Note:* If you built the image using another tag, you need to replace the image name in above command.
