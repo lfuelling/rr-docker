@@ -8,7 +8,7 @@ ccache -M 150
 echo "ccache limit set to 150GB"
 
 echo "Syncing source..."
-time repo sync --force-broken --force-sync --no-clone-bundle
+time repo sync -c --force-broken --force-sync --no-clone-bundle
 
 source build/envsetup.sh
 

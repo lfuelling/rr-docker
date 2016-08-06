@@ -2,12 +2,10 @@
 
 Docker image to build RR.
 
-## Building the image (not needed for use when docker push is done)
-
-Replace [YOUR_DOCKER_UNAME] with the username you use at dockerHub.
+## Building the image
 
 1. Clone this repo & cd into it
-2. `docker build -t [YOUR_DOCKER_UNAME] .` (Note the dot!)
+2. `docker build -t [TAG/IMAGE_NAME] .` (Note the dot!)
 
 ## Usage
 
@@ -19,13 +17,13 @@ First, you need to get the source. To do that (assuming that you already have re
 mkdir -p [YOUR_SRC_DIR]
 mkdir -p [YOUR_CACHE_DIR]
 cd [YOUR_SRC_DIR]
-repo init -u git://github.com/ResurrectionRemix/platform_manifest.git -b marshmallow
+repo init -u git://github.com/ResurrectionRemix/platform_manifest.git -b marshmallow -c
 ```
 
 To sync the source and start the build:
 
 ```bash
-docker run -it -v [YOUR_SRC_DIR]:/root/source -v [YOUR_CACHE_DIR]:/root/cache -e "DEVICE=[YOUR_DEVICE]" lerk/rr-docker
+docker run -it -v [YOUR_SRC_DIR]:/root/source -v [YOUR_CACHE_DIR]:/root/cache -e "DEVICE=[YOUR_DEVICE]" [TAG/IMAGE_NAME]
 ```
 
 *Note:* If you built the image using another tag, you need to replace the image name in above command.
