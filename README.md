@@ -2,6 +2,13 @@
 
 Docker image to build RR.
 
+## Building the image
+
+Replace [YOUR_DOCKER_UNAME] with the username you use at dockerHub.
+
+1. Clone this repo & cd into it
+2. `docker build -t [YOUR_DOCKER_UNAME] .` (Note the dot!)
+
 ## Usage
 
 Replace `[YOUR_SRC_DIR]` with the path where your source code is stored (I didn't want to bloat the image), `[YOUR_DEVICE]` with your device codename and `[YOUR_CACHE_DIR]` with the path you want ccache to use.
@@ -20,3 +27,9 @@ To sync the source and start the build:
 ```bash
 docker run -it -v [YOUR_SRC_DIR]:/root/source -v [YOUR_CACHE_DIR]:/root/cache -e "DEVICE=[YOUR_DEVICE]" lerk/android
 ```
+
+*Note:* If you built the image using another tag, you need to replace the image name in above command.
+
+## Motivation
+
+I wanted to run a build on my Mac. (Windoge should work too)
