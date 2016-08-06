@@ -18,5 +18,5 @@ repo init -u git://github.com/ResurrectionRemix/platform_manifest.git -b marshma
 To sync the source and start the build:
 
 ```bash
-docker run  -it -v [YOUR_SRC_DIR]:/root/source -v [YOUR_CACHE_DIR]:/root/cache -e "DEVICE=[YOUR_DEVICE]"
+docker run -it -v [YOUR_SRC_DIR]:/root/source -v [YOUR_CACHE_DIR]:/root/cache -e "DEVICE=[YOUR_DEVICE]" lerk/android
 ```
