@@ -15,10 +15,14 @@ RUN mkdir -p /root/bin
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /root/bin/repo
 RUN chmod a+x /root/bin/repo
 
+# Set locale to utf-8
+RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen en_US.utf8 && /usr/sbin/update-locale LANG=en_US.UTF-8
+
 # Set envs
 ENV PATH="/root/bin:${PATH}"
 ENV USE_CCACHE="1"
 ENV CCACHE_DIR="/root/cache"
+ENV LANG="en_US.UTF-8"
 
 # Add build script
 ADD build.sh /root/build.sh
