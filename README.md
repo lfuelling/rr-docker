@@ -17,7 +17,7 @@ First, you need to get the source. To do that (assuming that you already have re
 mkdir -p [YOUR_SRC_DIR]
 mkdir -p [YOUR_CACHE_DIR]
 cd [YOUR_SRC_DIR]
-repo init -u git://github.com/ResurrectionRemix/platform_manifest.git -b marshmallow -c
+repo init -u git://github.com/ResurrectionRemix/platform_manifest.git -b marshmallow --depth=1
 ```
 
 To sync the source and start the build:
