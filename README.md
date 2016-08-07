@@ -26,7 +26,7 @@ To sync the source and start the build:
 docker run -it -v [YOUR_SRC_DIR]:/root/source -v [YOUR_CACHE_DIR]:/root/cache -e "DEVICE=[YOUR_DEVICE]" [TAG/IMAGE_NAME]
 ```
 
-*Note:* If you built the image using another tag, you need to replace the image name in above command.
+*Note:* If you don't want to build this yourself use `lerk/rr-docker` as tag.
 
 ## Motivation
 
