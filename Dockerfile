@@ -2,6 +2,11 @@ FROM ubuntu:14.04
 
 MAINTAINER Lukas Fülling <lerk@lerk.io>
 
+ARG VCS_REF
+
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/lfuelling/rr-docker"
+
 VOLUME ["/root/source", "/root/cache"]
 
 # Install packages
