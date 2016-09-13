@@ -1,4 +1,4 @@
-# rr-docker
+# rr-docker [![](https://images.microbadger.com/badges/image/lerk/rr-docker.svg)](https://microbadger.com/images/lerk/rr-docker "Get your own image badge on microbadger.com")
 
 Docker image to build RR.
 
